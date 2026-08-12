@@ -1,0 +1,32 @@
+subscription_id: "${AZURE_SUBSCRIPTION_ID}"
+tenant_id: "${AZURE_TENANT_ID}"
+resource_group: rg-iot-manufacturing-analytics
+location: eastus
+
+adls:
+  account_name: stiotmfgwaqas01
+  containers:
+    landing: landing
+    bronze: bronze
+    silver: silver
+    gold: gold
+  paths:
+    landing_raw: landing/raw/manufacturing/iot
+    bronze_raw: bronze/manufacturing/iot
+    silver: silver/manufacturing/iot
+    gold: gold/manufacturing/iot
+
+data_factory:
+  name: adf-iot-mfg-waqas01
+  pipeline_ingest: pl_ingest_manufacturing_iot
+
+databricks:
+  host: "${DATABRICKS_HOST}"
+  cluster_id: "${DATABRICKS_CLUSTER_ID}"
+
+synapse:
+  workspace: syn-iot-mfg-wus2
+  location: westus2
+  sql_endpoint: syn-iot-mfg-wus2-ondemand.sql.azuresynapse.net
+  database: manufacturing_dw
+  star_schema_path: gold/marts/star_schema

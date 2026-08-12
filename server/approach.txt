@@ -1,0 +1,27 @@
+Python using load data into ADF 
+        ↓
+Airflow
+        ↓
+Azure Data Factory
+        ↓
+ADLS Gen2
+        ↓
+Bronze
+        ↓
+Databricks + Scala/Spark
+        ↓
+Silver
+        ↓
+Delta Lake
+        ↓
+Gold
+        ↓
+Synapse
+        ↓
+Star Schema
+        ↓
+ML / Predictive Maintenance
+        ↓
+Synapse
+        ↓
+Power BI

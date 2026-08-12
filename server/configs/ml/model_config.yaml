@@ -1,0 +1,35 @@
+experiment_name: predictive-maintenance
+model_name: machine-failure-classifier
+target_column: Machine failure
+random_state: 42
+test_size: 0.2
+
+features:
+  - Air temperature [K]
+  - Process temperature [K]
+  - Rotational speed [rpm]
+  - Torque [Nm]
+  - Tool wear [min]
+  - Type
+
+failure_flags:
+  - TWF
+  - HDF
+  - PWF
+  - OSF
+  - RNF
+
+training:
+  algorithm: random_forest
+  params:
+    n_estimators: 200
+    max_depth: 12
+    class_weight: balanced
+
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - roc_auc

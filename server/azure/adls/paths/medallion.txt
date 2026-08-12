@@ -1,0 +1,4 @@
+bronze/raw/manufacturing/iot/
+silver/manufacturing/iot/
+gold/manufacturing/iot/
+gold/marts/star_schema/

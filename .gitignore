@@ -1,0 +1,33 @@
+# Secrets / local env
+.env
+.env.*
+!.env.example
+**/.synapse_sql_password.tmp
+**/.synapse_workspace_name.tmp
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/.venv/
+**/venv/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/mlruns/
+**/.airflow/
+
+# Node
+**/node_modules/
+**/dist/
+**/.vite/
+
+# Azure runtime artifacts with secrets
+server/azure/databricks/jobs/_runtime_job.json
+server/azure/databricks/jobs/_last_create.json
+server/azure/databricks/jobs/_last_run.json
+server/azure/databricks/jobs/_run_now.json
+
+# Logs / OS
+*.log
+.DS_Store
+Thumbs.db

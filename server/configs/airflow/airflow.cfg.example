@@ -1,0 +1,7 @@
+[core]
+dags_folder = ./src/orchestration/airflow/dags
+load_examples = False
+executor = LocalExecutor
+
+[webserver]
+web_server_port = 8080
